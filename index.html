@@ -72,6 +72,11 @@
       words30.push({a: "symbol", b: 12.8}, {a: "ceremony", b: 14.3}, {a: "congratulation", b: 16.2}, {a: "breath", b: 18}, {a: "death", b: 19.7}, {a: "headache", b: 21.3}, {a: "muscle", b: 23})
       words30.push({a: "base", b: 24.7}, {a: "lock", b: 26.6}, {a: "dislike", b: 28}, {a: "feed", b: 29.5}, {a: "lend", b: 31}, {a: "suffer", b: 32.2}, {a: "hang", b: 34}, {a: "wrap", b: 35.7}); // 36.5
       words30.push({a: "pleasant", b: 37.2}, {a: "lonely", b: 38.8}, {a: "thirsty", b: 40.2}, {a: "polite", b: 42.1}, {a: "rude", b: 43.7}, {a: "excellent", b: 45.5}, {a: "overweight", b: 47.1}, {a: "perhaps", b: 48.7}, {a: "twice", b: 50.5})
+
+      var words31 = [{a: "heaven", b: 2.5}, {a: "myth", b: 4.3}, {a: "sand", b: 6}, {a: "castle", b: 7.5}, {a: "kindness", b: 9.2}, {a: "concentration", b: 10.9} ];
+      words31.push({a: "mystery", b: 12.8}, {a: "battle", b: 14.5}, {a: "industry", b: 16.2}, {a: "pile", b: 18}, {a: "chat", b: 19.7}, {a: "puzzle", b: 21}, {a: "text", b: 22.3})
+      words31.push({a: "advance", b: 24}, {a: "graduate", b: 25.7}, {a: "predict", b: 28}, {a: "compare", b: 29.5}, {a: "complain", b: 31}, {a: "forgive", b: 32.6}, {a: "determine", b: 34.3}, {a: "exist", b: 36.2}); // 36.5
+      words31.push({a: "dive", b: 38}, {a: "upper", b: 39.8}, {a: "central", b: 41.9}, {a: "normal", b: 43.7}, {a: "similar", b: 45.3}, {a: "honest", b: 47.1}, {a: "ashamed", b: 48.7}, {a: "anymore", b: 50.5}, {a: "besides", b: 52})
     
       var words = {}
       words["23"] = words23;
@@ -81,6 +86,7 @@
       words["27"] = words27;
       words["28"] = words28;
       words["30"] = words30;
+      words["31"] = words31;
 
       function audioPlay(videoIdx) {
         $("#audioSource").attr("src", chart[videoIdx])
@@ -195,6 +201,8 @@
   </button>
   <div class="dropdown-menu">
     <a class="dropdown-item" chart="30">Day30</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" chart="31">Day31</a>
   </div>
 </div>
 
