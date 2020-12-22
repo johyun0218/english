@@ -155,6 +155,11 @@
       words38.push({a: "nod", b: 23.7}, {a: "escape", b:  25.5}, {a: "envy", b:  26.7}, {a: "measure", b: 28.6}, {a: "chief", b: 30.2}, {a: "total", b: 31.8}, {a: "worth", b: 33.4}, {a: "embarrass", b: 34.6}); // 36.5
       words38.push({a: "erupt", b: 36.5}, {a: "perform", b: 38.4}, {a: "publish", b: 40}, {a: "silent", b: 41.6}, {a: "silly", b: 43.7}, {a: "scary", b: 45}, {a: "sore", b: 46.5}, {a: "bitter", b: 48.3}, {a: "lately", b: 50})
 
+      var words39 = [{a: "landscape", b: 2.5}, {a: "construction", b: 4.3}, {a: "mood", b: 6}, {a: "excitement", b: 7.5}, {a: "complaint", b: 9.2}, {a: "confidence", b: 10.9} ];
+      words39.push({a: "invasion", b: 12.8}, {a: "container", b: 14.5}, {a: "ash", b: 16.2}, {a: "bar", b: 17.6}, {a: "contact", b: 19.2}, {a: "benefit", b: 21}, {a: "damage", b: 22.7}) 
+      words39.push({a: "supply", b: 24}, {a: "demand", b:  25.8}, {a: "lack", b:  27.3}, {a: "conflict", b: 28.6}, {a: "spin", b: 30.6}, {a: "scratch", b: 32.2}, {a: "suppose", b: 34.5}, {a: "refer", b: 36.5}); // 36.5
+      words39.push({a: "ruin", b: 37.4}, {a: "rid", b: 39}, {a: "tight", b: 40.5}, {a: "brilliant", b: 42}, {a: "specific", b: 43.7}, {a: "unusual", b: 45.5}, {a: "negative", b: 47.5}, {a: "royal", b: 49}, {a: "partly", b: 50.5})
+
       var words = {}
       words["23"] = words23;
       words["24"] = words24;
@@ -171,6 +176,7 @@
       words["36"] = words36;
       words["37"] = words37;
       words["38"] = words38;
+      words["39"] = words39;
 
       function audioPlay(videoIdx) {
         $("#audioSource").attr("src", chart[videoIdx])
@@ -303,8 +309,8 @@
     <a class="dropdown-item" chart="37">37d</a>
     <div class="dropdown-divider"></div>
     <a class="dropdown-item" chart="38">38d</a>
-    <!-- <div class="dropdown-divider"></div>
-    <a class="dropdown-item" chart="39">Day39</a> -->
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" chart="39">39d</a>
   </div>
 </div>
 <div class="btn-group">
