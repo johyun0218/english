@@ -160,6 +160,11 @@
       words39.push({a: "supply", b: 24}, {a: "demand", b:  25.8}, {a: "lack", b:  27.3}, {a: "conflict", b: 28.6}, {a: "spin", b: 30.6}, {a: "scratch", b: 32.2}, {a: "suppose", b: 34.5}, {a: "refer", b: 36.5}); // 36.5
       words39.push({a: "ruin", b: 37.4}, {a: "rid", b: 39}, {a: "tight", b: 40.5}, {a: "brilliant", b: 42}, {a: "specific", b: 43.7}, {a: "unusual", b: 45.5}, {a: "negative", b: 47.5}, {a: "royal", b: 49}, {a: "partly", b: 50.5})
 
+      var words40 = [{a: "happiness", b: 2.5}, {a: "freedom", b: 4.3}, {a: "independence", b: 6}, {a: "imagination", b: 7.5}, {a: "importance", b: 9.5}, {a: "speech", b: 11.3} ];
+      words40.push({a: "silence", b: 13}, {a: "invitation", b: 14.7}, {a: "exhibition", b: 16.4}, {a: "sculpture", b: 18.6}, {a: "region", b: 20.3}, {a: "position", b: 21.9}, {a: "research", b: 23.7}) 
+      words40.push({a: "aim", b: 25.5}, {a: "moral", b:  27.3}, {a: "extra", b:  28.6}, {a: "arrange", b: 30.6}, {a: "advise", b: 32.2}, {a: "recommend", b: 34.2}, {a: "declare", b: 36.1}, {a: "prove", b: 37.4}); // 36.5
+      words40.push({a: "injure", b: 39}, {a: "connect", b: 40.5}, {a: "hug", b: 42.2}, {a: "foggy", b: 43.7}, {a: "neat", b: 45.5}, {a: "loose", b: 47.5}, {a: "endangered", b: 49}, {a: "bound", b: 50.5}, {a: "recently", b: 51.7})
+
       var words = {}
       words["23"] = words23;
       words["24"] = words24;
@@ -177,6 +182,7 @@
       words["37"] = words37;
       words["38"] = words38;
       words["39"] = words39;
+      words["40"] = words40;
 
       function audioPlay(videoIdx) {
         $("#audioSource").attr("src", chart[videoIdx])
@@ -319,7 +325,7 @@
     <span class="sr-only">Toggle Dropdown</span>
   </button>
   <div class="dropdown-menu">
-    
+    <a class="dropdown-item" chart="40">40d</a>
   </div>
 </div>
 <div class="btn-group">
