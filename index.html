@@ -170,6 +170,12 @@
       words41.push({a: "index", b: 25.5}, {a: "behave", b:  27.3}, {a: "compete", b:  28.6}, {a: "argue", b: 30.6}, {a: "release", b: 32.2}, {a: "pretend", b: 33.8}, {a: "conclude", b: 35.5}, {a: "observe", b: 37.1}); // 36.5
       words41.push({a: "spicy", b: 39}, {a: "terrific", b: 40.5}, {a: "steady", b: 42.2}, {a: "various", b: 43.7}, {a: "unique", b: 45.5}, {a: "unnecessary", b: 47.5}, {a: "ill", b: 49}, {a: "underground", b: 50.5}, {a: "sincerely", b: 52.5})
 
+      var words42 = [{a: "peer", b: 2.5}, {a: "pressure", b: 4.3}, {a: "loss", b: 6}, {a: "playground", b: 7.5}, {a: "pond", b: 9.5}, {a: "harbor", b: 11.3} ];
+      words42.push({a: "frame", b: 13}, {a: "hammer", b: 14.7}, {a: "expression", b: 16.4}, {a: "quality", b: 17.6}, {a: "movement", b: 19.3}, {a: "package", b: 20.9}, {a: "survey", b: 22.7}, {a: "panic", b: 24.5}) 
+      words42.push({a: "sigh", b: 26.3}, {a: "rinse", b:  27.6}, {a: "appeal", b:  29.6}, {a: "sweep", b: 31.2}, {a: "consist", b: 32.8}, {a: "unify", b: 34.5}, {a: "depress", b: 36.6}, {a: "blame", b: 38}); // 36.5
+      words42.push({a: "smooth", b: 40.2}, {a: "wooden", b: 42.2}, {a: "helpless", b: 43.7}, {a: "incredible", b: 45.5}, {a: "available", b: 47}, {a: "ancient", b: 49}, {a: "recent", b: 50.5}, {a: "thus", b: 52})
+
+
       var words = {}
       words["23"] = words23;
       words["24"] = words24;
@@ -189,6 +195,7 @@
       words["39"] = words39;
       words["40"] = words40;
       words["41"] = words41;
+      words["42"] = words42;
 
       function audioPlay(videoIdx) {
         $("#audioSource").attr("src", chart[videoIdx])
@@ -241,7 +248,7 @@
 
           if (text == 'satellite') {
             timeout = 1600;
-          } else if (text == 'reservation' || text == 'prediction' || text == 'marriage') {
+          } else if (text == 'reservation' || text == 'prediction' || text == 'marriage' || text == 'expression') {
             timeout = 1200;
           }
 
@@ -334,6 +341,8 @@
     <a class="dropdown-item" chart="40">40d</a>
     <div class="dropdown-divider"></div>
     <a class="dropdown-item" chart="41">41d</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" chart="42">42d</a>
   </div>
 </div>
 <div class="btn-group">
