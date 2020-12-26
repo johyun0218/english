@@ -11,7 +11,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <!-- jQuery and JS bundle w/ Popper.js -->
-    <link rel="stylesheet" type="text/css" href="http://voca.mdonga.com/eatenglish/styles/style_MI.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="http://voca.mdonga.com/eatenglish/styles/style_MI.css" /> -->
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
@@ -175,6 +175,10 @@
       words42.push({a: "sigh", b: 26.3}, {a: "rinse", b:  27.6}, {a: "appeal", b:  29.6}, {a: "sweep", b: 31.2}, {a: "consist", b: 32.8}, {a: "unify", b: 34.5}, {a: "depress", b: 36.6}, {a: "blame", b: 38}); // 36.5
       words42.push({a: "smooth", b: 40.2}, {a: "wooden", b: 42.2}, {a: "helpless", b: 43.7}, {a: "incredible", b: 45.5}, {a: "available", b: 47}, {a: "ancient", b: 49}, {a: "recent", b: 50.5}, {a: "thus", b: 52})
 
+      var words43 = [{a: "wildlife", b: 2.5, c: '야생 생물'}, {a: "sunset", b: 4.3, c: '해넘이[일몰]'}, {a: "horizon", b: 6, c: '수평선'}, {a: "steam", b: 7.5, c: '증기'}, {a: "warmth", b: 9.1, c: '따뜻함'}, {a: "statement", b: 11, c: '성명,진술'} ];
+      words43.push({a: "response", b: 12.5, c: '반응,대답'}, {a: "task", b: 14.2, c: '과업[과제]'}, {a: "security", b: 16, c: '보안[안보]'}, {a: "needle", b: 17.6, c: '바늘'}, {a: "branch", b: 19.3, c: '나뭇가지, 지사[지점]'}, {a: "thread", b: 20.9, c: '실, (실을) 꽤다'}, {a: "row", b: 22.7, c: '줄[열], 배[노]를 젓다'}, {a: "yawn", b: 24.0, c: '하품하다, 하품'}) 
+      words43.push({a: "rub", b: 25.8, c: '문지르다'}, {a: "wipe", b:  27.1, c: '닦다'}, {a: "operate", b:  29, c: '작동[운용]하다, 수술하다'}, {a: "contain", b:  30.8, c: '포함[함유]하다'}, {a: "preserve", b: 32.8, c: '보존[보호]하다'}, {a: "refuse", b: 34.5, c: '거절[거부]하다'}, {a: "remind", b: 36, c: '상기시키다'}, {a: "bother", b: 37.8, c: '괴롭히다[귀찮게 하다], 신경쓰다'}, {a: "tiny", b: 39.6, c: '아주작은'}, {a: "curly", b: 41, c: '곱슬곱슬한'}); // 36.5
+      words43.push({a: "rapid", b: 42.7, c: '빠른(=fast)'}, {a: "shy", b: 44.2, c: '수줍어하는'}, {a: "eastern", b: 45.7, c: '동쪽의'}, {a: "violent", b: 47.5, c: '폭력적인'}, {a: "worldwide", b: 49.3, c: '전 세계적인'}, {a: "highly", b: 51, c: '대단히, 고도로'})
 
       var words = {}
       words["23"] = words23;
@@ -183,6 +187,7 @@
       words["26"] = words26;
       words["27"] = words27;
       words["28"] = words28;
+      words["29"] = words29;
       words["30"] = words30;
       words["31"] = words31;
       words["32"] = words32;
@@ -196,6 +201,7 @@
       words["40"] = words40;
       words["41"] = words41;
       words["42"] = words42;
+      words["43"] = words43;
 
       function audioPlay(videoIdx) {
         $("#audioSource").attr("src", chart[videoIdx])
@@ -204,10 +210,12 @@
         $("#audioControl").trigger("pause");
 
         var html = []
-          var list = words[videoIdx] || [];
+        var list = words[videoIdx] || [];
+        var checked = $('#defaultCheck1').is(':checked');
         for (var i = 0; i < list.length; i++) {
           var row = list[i];
-          html.push("<a b='"+ row.b +"' class=\"list-group-item list-group-item-action\">"+ row.a + "</a>");
+          var visible = (checked ? 'show': 'none');
+          html.push("<a b='"+ row.b +"' class=\"list-group-item list-group-item-action\"><div class=\"row\"><div class=\"col\">"+ row.a + "</div><div style='display:"+ visible + ";' class=\"col hangul\">"+ (row.c || '') + "</div></div></a>");
         }
         $("#divWordList").html(html.join(''));
         
@@ -221,6 +229,16 @@
           $(this).parent().parent().find('button').eq(0).html($(this).html());
           var chart = $(this).attr('chart');
           audioPlay(chart);
+        });
+
+        $('#defaultCheck1').click(function() {
+          var checked = $(this).is(':checked');
+          if (checked) {
+            $('#divWordList').find('.hangul').show()
+          } else {
+            $('#divWordList').find('.hangul').hide()
+          }
+          
         });
 
         $('#divWordList').on('click', 'a', function() {
@@ -284,6 +302,12 @@
       </audio>
 
       <!-- Example split danger button -->
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+          단어 한글 보기
+        </label>
+      </div>
 <div class="btn-group">
   <button type="button" class="btn btn-danger btn-sm">20d</button>
   <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -343,6 +367,8 @@
     <a class="dropdown-item" chart="41">41d</a>
     <div class="dropdown-divider"></div>
     <a class="dropdown-item" chart="42">42d</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" chart="43">43d</a>
   </div>
 </div>
 <div class="btn-group">
