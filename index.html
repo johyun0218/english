@@ -186,6 +186,11 @@
       words46.push({a: "stare", b: 26.5, c: '빤히 보다[응시하다]'}, {a: "deceive", b:  28, c: '속이다'}, {a: "???", b:  29.8, c: '???'}, {a: "twist", b:  31.4, c: '비틀다[구부리다/돌리다]'}, {a: "decorate", b:  32.8, c: '꾸미다[장식하다]'}, {a: "tend", b: 34.3, c: '경향이 있다[~하기 쉽다]'}, {a: "firm", b: 35.9, c: '회사, 단단한[딱딱한]'}, {a: "senior", b: 37, c: '연상,어르신,졸업반 학생,상급의'}, {a: "major", b: 39.4, c: '주요한,전공,전공하다'}, {a: "minor", b: 41.4, c: '작은[중요하지 않은], 미성년자,부전공'}, {a: "individual", b: 42.6, c: '개인의,개개의,개인'}); // 36.5
       words46.push({a: "current", b: 44.4, c: '현재의,흐름[조류/기류/전류]'}, {a: "grand", b: 45.8, c: '웅장한'}, {a: "odd", b: 47.6, c: '이상한, 홀수의'}, {a: "awkward", b: 49.5, c: '어색한'}, {a: "directly", b: 50.6, c: '직접,똑바로'})
 
+      var words47 = [{a: "novel", b: 2.5, c: '소설'}, {a: "grave", b: 4.0, c: '무덤'}, {a: "crime", b: 5.5, c: '범죄'}, {a: "prison", b: 7.0, c: '감옥[교도소]'}, {a: "blanket", b: 8.8, c: '담요'}, {a: "skin", b: 10.5, c: '피부'} ];
+      words47.push({a: "instance", b: 12.1, c: '사례'}, {a: "element", b: 13.8, c: '요소[성분]'}, {a: "dozen", b: 15, c: '다스[12개]'}, {a: "honesty", b: 16.6, c: '정직'}, {a: "duty", b: 18.4, c: '의무,세금'}, {a: "failure", b: 20, c: '실패'}, {a: "rate", b: 21.5, c: '(비)율,요금,속도'}, {a: "progress", b: 23.3, c: '진보[진전/진행]'}) 
+      words47.push({a: "trade", b: 25.2, c: '거래[무역], 거래[무역]하다'}, {a: "doubt", b: 26.5 , c: '의심, 의심하다,의문이다'}, {a: "march", b: 28.4 , c: '행진하다,행진, 3월'}, {a: "delay", b:  29.8, c: '미루다[연기하다/지연시키다], 지연'}, {a: "satisfy", b:  31.4, c: '만족시키다'}, {a: "misunderstand", b: 33.8, c: '오해하다'}, {a: "scold", b: 35.7, c: '꾸짖다'}, {a: "apply", b: 36.9, c: '지원[신청]하다, 적용하다'}, {a: "drown", b: 39.4, c: '익사하다[익사시키다]'}, {a: "broad", b: 41.1, c: '넒은(=wide ↔ narrow)'}, {a: "cruel", b: 42.3, c: '잔인한'}); // 36.5
+      words47.push({a: "private", b: 43.8, c: '사적인 ( ↔ public)'}, {a: "urgent", b: 45.8, c: '긴급한'}, {a: "military", b: 47.6, c: '군사의'}, {a: "historical", b: 49.5, c: '역사(학)의'}, {a: "fully", b: 51, c: '완전히[충분히](=completely)'})
+
       var words = {}
       words["23"] = words23;
       words["24"] = words24;
@@ -209,6 +214,7 @@
       words["42"] = words42;
       words["43"] = words43;
       words["46"] = words46;
+      words["47"] = words47;
 
       function audioPlay(videoIdx) {
         $("#audioSource").attr("src", chart[videoIdx])
@@ -378,6 +384,8 @@
     <a class="dropdown-item" chart="43">43d</a>
     <div class="dropdown-divider"></div>
     <a class="dropdown-item" chart="46">46d</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" chart="47">47d</a>
   </div>
 </div>
 <div class="btn-group">
