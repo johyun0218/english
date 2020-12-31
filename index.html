@@ -254,7 +254,7 @@
         for (var i = 0; i < list.length; i++) {
           var row = list[i];
           var visible = (checked ? 'show': 'none');
-          html.push("<a b='"+ row.b +"' class=\"list-group-item list-group-item-action\"><div class=\"row\"><div class=\"col\">"+ row.a + "</div><div style='display:"+ visible + ";' class=\"col hangul\">"+ (row.c || '') + "</div></div></a>");
+          html.push("<a b='"+ row.b +"' class=\"list-group-item list-group-item-action\"><div class=\"row\"><div class=\"col\">"+ row.a + " </div><div style='display:"+ visible + ";' class=\"col hangul\">"+ (row.c || '') + "</div></div></a>");
         }
         $("#divWordList").html(html.join(''));
         
@@ -282,6 +282,7 @@
 
         $('#divWordList').on('click', 'a', function() {
           var $tag = $(this);
+          $tag.addClass('list-group-item-primary');
           //var index = $tag.index();
           var time = parseFloat($tag.attr('b'));
           //alert(time);
