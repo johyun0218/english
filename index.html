@@ -180,6 +180,12 @@
       words43.push({a: "rub", b: 25.8, c: '문지르다'}, {a: "wipe", b:  27.1, c: '닦다'}, {a: "operate", b:  29, c: '작동[운용]하다, 수술하다'}, {a: "contain", b:  30.8, c: '포함[함유]하다'}, {a: "preserve", b: 32.8, c: '보존[보호]하다'}, {a: "refuse", b: 34.5, c: '거절[거부]하다'}, {a: "remind", b: 36, c: '상기시키다'}, {a: "bother", b: 37.8, c: '괴롭히다[귀찮게 하다], 신경쓰다'}, {a: "tiny", b: 39.6, c: '아주작은'}, {a: "curly", b: 41, c: '곱슬곱슬한'}); // 36.5
       words43.push({a: "rapid", b: 42.7, c: '빠른(=fast)'}, {a: "shy", b: 44.2, c: '수줍어하는'}, {a: "eastern", b: 45.7, c: '동쪽의'}, {a: "violent", b: 47.5, c: '폭력적인'}, {a: "worldwide", b: 49.3, c: '전 세계적인'}, {a: "highly", b: 51, c: '대단히, 고도로'})
 
+
+      var words46 = [{a: "passenger", b: 2.5, c: '승객'}, {a: "continent", b: 4.3, c: '대륙'}, {a: "port", b: 6, c: '항구'}, {a: "cooperation", b: 7.5, c: '협력[협동]'}, {a: "competition", b: 9.1, c: '경쟁,대회[시합]'}, {a: "convenience", b: 11, c: '편리[편의]'} ];
+      words46.push({a: "curiosity", b: 12.8, c: '호기심'}, {a: "suicide", b: 14.8, c: '자살'}, {a: "bullet", b: 16.6, c: '총알'}, {a: "descendant", b: 18, c: '자손[후손]'}, {a: "collection", b: 19.8, c: '수집[품]'}, {a: "desire", b: 21.5, c: '욕구[욕망], 바라다'}, {a: "export", b: 23.3, c: '수출[품], 수출하다'}, {a: "blend", b: 24.7, c: '섞(이)다,[혼합하다]'}) 
+      words46.push({a: "stare", b: 26.5, c: '빤히 보다[응시하다]'}, {a: "deceive", b:  28, c: '속이다'}, {a: "???", b:  29.8, c: '???'}, {a: "twist", b:  31.4, c: '비틀다[구부리다/돌리다]'}, {a: "decorate", b:  32.8, c: '꾸미다[장식하다]'}, {a: "tend", b: 34.3, c: '경향이 있다[~하기 쉽다]'}, {a: "firm", b: 35.9, c: '회사, 단단한[딱딱한]'}, {a: "senior", b: 37, c: '연상,어르신,졸업반 학생,상급의'}, {a: "major", b: 39.4, c: '주요한,전공,전공하다'}, {a: "minor", b: 41.4, c: '작은[중요하지 않은], 미성년자,부전공'}, {a: "individual", b: 42.6, c: '개인의,개개의,개인'}); // 36.5
+      words46.push({a: "current", b: 44.4, c: '현재의,흐름[조류/기류/전류]'}, {a: "grand", b: 45.8, c: '웅장한'}, {a: "odd", b: 47.6, c: '이상한, 홀수의'}, {a: "awkward", b: 49.5, c: '어색한'}, {a: "directly", b: 50.6, c: '직접,똑바로'})
+
       var words = {}
       words["23"] = words23;
       words["24"] = words24;
@@ -202,6 +208,7 @@
       words["41"] = words41;
       words["42"] = words42;
       words["43"] = words43;
+      words["46"] = words46;
 
       function audioPlay(videoIdx) {
         $("#audioSource").attr("src", chart[videoIdx])
@@ -369,6 +376,8 @@
     <a class="dropdown-item" chart="42">42d</a>
     <div class="dropdown-divider"></div>
     <a class="dropdown-item" chart="43">43d</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" chart="46">46d</a>
   </div>
 </div>
 <div class="btn-group">
