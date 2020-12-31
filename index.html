@@ -191,6 +191,14 @@
       words47.push({a: "trade", b: 25.2, c: '거래[무역], 거래[무역]하다'}, {a: "doubt", b: 26.5 , c: '의심, 의심하다,의문이다'}, {a: "march", b: 28.4 , c: '행진하다,행진, 3월'}, {a: "delay", b:  29.8, c: '미루다[연기하다/지연시키다], 지연'}, {a: "satisfy", b:  31.4, c: '만족시키다'}, {a: "misunderstand", b: 33.8, c: '오해하다'}, {a: "scold", b: 35.7, c: '꾸짖다'}, {a: "apply", b: 36.9, c: '지원[신청]하다, 적용하다'}, {a: "drown", b: 39.4, c: '익사하다[익사시키다]'}, {a: "broad", b: 41.1, c: '넒은(=wide ↔ narrow)'}, {a: "cruel", b: 42.3, c: '잔인한'}); // 36.5
       words47.push({a: "private", b: 43.8, c: '사적인 ( ↔ public)'}, {a: "urgent", b: 45.8, c: '긴급한'}, {a: "military", b: 47.6, c: '군사의'}, {a: "historical", b: 49.5, c: '역사(학)의'}, {a: "fully", b: 51, c: '완전히[충분히](=completely)'})
 
+      var words48 = [{a: "universe", b: 2.5, c: '우주'}, {a: "laughter", b: 4.3, c: '웃음(소리)'}, {a: "knee", b: 5.5, c: '무릎'}, {a: "gym", b: 7.1, c: ' 체육관'}, {a: "equipment", b: 9.1, c: '장비'}]
+      words48.push({a: "rope", b: 10.5, c: '로프[밧줄]'}, {a: "refrigerator", b: 12.4, c: '냉장고'}, {a: "production", b: 14.3, c: '생산'}, {a: "tradition", b: 16.1, c: '전통'}, {a: "religion", b: 17.5, c: '전통'});
+      words48.push({a: "semester", b: 19.3, c: '학기'}, {a: "shadow", b: 21.1, c: '그림자[그늘]'}, {a: "flea", b: 22.8, c: '벼룩'}, {a: "plug", b: 24.7, c: '플러그, 마개, 막다'}) 
+      words48.push({a: "ache", b: 26.5, c: '아프다(=hurt), 아픔[통증]'}, {a: "handle", b:  28, c: '다루다[처리하다], 만지다, 손잡이'}, {a: "pause", b:  29.3, c: '잠시 멈추다, 멈춤, 일시정지'}, {a: "admire", b:  30.9, c: '존경하다, 감탄하다'}, {a: "apologize", b:  32.6, c: '사과하다'});
+      words48.push({a: "threaten", b: 34.3, c: '위협[협박]하다'}, {a: "arrest", b: 35.9, c: '체포하다'}, {a: "select", b: 37.7, c: '선별[선정/선택]하다(=pick,choose)'}, {a: "narrow", b: 39.4, c: '좁은'});
+      words48.push({a: "attractive", b: 41.4, c: '매력적인'}, {a: "awful", b: 43.1, c: '끔찍한[지독한)(=terrible)'}); // 36.5
+      words48.push({a: "casual", b: 44.4, c: '평상시의'}, {a: "capable", b: 46.3, c: '(~ of) ~을 할 수 있는'}, {a: "absent", b: 48.2, c: '결석한, 없는'}, {a: "alike", b: 49.5, c: '비슷한, 똑깥이'}, {a: "otherwise", b: 51.2, c: '그렇지 않으면'})
+
       var words = {}
       words["23"] = words23;
       words["24"] = words24;
@@ -215,6 +223,7 @@
       words["43"] = words43;
       words["46"] = words46;
       words["47"] = words47;
+      words["48"] = words48;
 
       function audioPlay(videoIdx) {
         $("#audioSource").attr("src", chart[videoIdx])
@@ -386,6 +395,8 @@
     <a class="dropdown-item" chart="46">46d</a>
     <div class="dropdown-divider"></div>
     <a class="dropdown-item" chart="47">47d</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" chart="48">48d</a>
   </div>
 </div>
 <div class="btn-group">
