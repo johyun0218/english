@@ -199,6 +199,14 @@
       words48.push({a: "attractive", b: 41.4, c: '매력적인'}, {a: "awful", b: 43.1, c: '끔찍한[지독한)(=terrible)'}); // 36.5
       words48.push({a: "casual", b: 44.4, c: '평상시의'}, {a: "capable", b: 46.3, c: '(~ of) ~을 할 수 있는'}, {a: "absent", b: 48.2, c: '결석한, 없는'}, {a: "alike", b: 49.5, c: '비슷한, 똑깥이'}, {a: "otherwise", b: 51.2, c: '그렇지 않으면'})
 
+      var words49 = [{a: "citizen", b: 2.5, c: '시민'}, {a: "fare", b: 3.8, c: '(교통)요금'}, {a: "tale", b: 5.5, c: '이야기'}, {a: "suggestion", b: 7.1, c: ' 제안'}, {a: "responsibility", b: 9.1, c: '책임'}]
+      words49.push({a: "risk", b: 11.0, c: '위험(=danger)'}, {a: "intelligence", b: 12.4, c: '지능'}, {a: "viewpoint", b: 14.3, c: '관점[시각]'}, {a: "shell", b: 16.1, c: '껍질'}, {a: "surface", b: 17.5, c: '표면'});
+      words49.push({a: "version", b: 19.3, c: '버전[판]'}, {a: "account", b: 21.1, c: '계좌,설명'}, {a: "influence", b: 22.8, c: '영향'}, {a: "hesitate", b: 24.5, c: '잠시 망설이다'}) 
+      words49.push({a: "fasten", b: 26.1, c: '묶다'}, {a: "manufacture", b:  28, c: '제조하다'}, {a: "hire", b:  29.3, c: '고용하다'}, {a: "examine", b:  31.5, c: '조사[검사]하다'}, {a: "explode", b:  33.2, c: '폭팔하다[폭파시키다]'});
+      words49.push({a: "erase", b: 34.8, c: '지우다'}, {a: "interrupt", b: 36.6, c: '방해하다[중단시키다]'}, {a: "deny", b: 38.5, c: '부인[부정]하다'}, {a: "former", b: 40.3, c: '이전의[전 ~]'});
+      words49.push({a: "clever", b: 41.4, c: '영리한(똑똑한)(=smart)'}, {a: "distant", b: 43.1, c: '먼'}); // 36.5
+      words49.push({a: "faint", b: 44.9, c: '희미한'}, {a: "double", b: 46.3, c: '두 배의, 2인용의, 이중의, 두배'}, {a: "entire", b: 48.2, c: '전체의(=whole)'}, {a: "frequent", b: 49.5, c: '잦은[빈번한]'}, {a: "possibly", b: 51.2, c: '아마'})
+
       var words = {}
       words["23"] = words23;
       words["24"] = words24;
@@ -224,6 +232,7 @@
       words["46"] = words46;
       words["47"] = words47;
       words["48"] = words48;
+      words["49"] = words49;
 
       function audioPlay(videoIdx) {
         $("#audioSource").attr("src", chart[videoIdx])
@@ -397,6 +406,8 @@
     <a class="dropdown-item" chart="47">47d</a>
     <div class="dropdown-divider"></div>
     <a class="dropdown-item" chart="48">48d</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" chart="49">49d</a>
   </div>
 </div>
 <div class="btn-group">
