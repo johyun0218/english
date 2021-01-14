@@ -310,6 +310,14 @@
       words59.push({a: "definite", b: 39.7, c: '확실한[명확한] (=clear)'}, {a: "urban", b: 41.3, c: '도시의 ( ↔ rural 시골의)'}, {a: "addicted", b: 42.8, c: '중독된[푹 빠진]'}, {a: "extreme", b: 44.6, c: '극도의[극단적인]'}); // 36.5
       words59.push({a: "academic", b: 46.2, c: '학업[학교/학문]의, 학구적인'}, {a: "guilty", b: 47.9, c: '죄책감을 느끼는, 유죄의 ( ↔ innocent)'}, {a: "conscious", b: 49.6, c: '의식하는, 의식이 있는, 의식적인'}, {a: "generally", b: 51.4, c: '일반적으로[대체로]'})
 
+      var words60 = [{a: "mankind", b: 2.5, c: '인류'}, {a: "poet", b: 3.8, c: '시인,  poem: 시'}, {a: "detective", b: 5.5, c: '형사[탐정]'}, {a: "consumer", b: 7.1, c: '소비자'}, {a: "chef", b: 8.9, c: '주방장[요리사]'}]
+      words60.push({a: "passion", b: 10.7, c: '열정 -> passionate:열정적인'}, {a: "steel", b: 12.4, c: '강철'}, {a: "device", b: 14.0, c: '장치'}, {a: "pill", b: 15.5, c: '알약[정제]'}, {a: "ceiling", b: 17.2, c: '천장'});
+      words60.push({a: "aisle", b: 18.8, c: '통로'}, {a: "appearance", b: 20.6, c: '외모, 출현'}, {a: "destination", b: 22.2, c: '목적지'}, {a: "sweat", b: 24.0, c: '땀, 땀을 흘리다'}) 
+      words60.push({a: "switch", b:  25.7, c: '스위치, 전환, 바꾸다, (~ on/off) 켜다/끄다'}, {a: "grap", b:  27.2, c: '움겨잡다[잡아채다]'}, {a: "plain", b:  28.7, c: '분명한[알기 쉬운], 소박한, 평야'}, {a: "giant", b:  30.2, c: '거대한, 거인'});
+      words60.push({a: "found", b: 31.8, c: '설립하다(=establish), foundation: 토대, 재단, 설립'}, {a: "seek", b: 33.3, c: '찾다, (추)구하다'}, {a: "rob", b: 34.8, c: '강탈하다[털다], -> robber: 강도'}, {a: "swing", b: 36.6, c: '흔들(리)다'});
+      words60.push({a: "cancel", b: 38.0, c: '취소하다'}, {a: "avoid", b: 39.7, c: '(회)피하다'}, {a: "rotten", b: 41.4, c: '썩은'}, {a: "magnetic", b: 43.2, c: '자기[자성]의, 자석 같은, -> magnet: 자석'}); // 36.5
+      words60.push({a: "steep", b: 44.8, c: '가파른'}, {a: "logical", b: 46.3, c: '논리적인, -> logic: 논리'}, {a: "ridiculous", b: 48.1, c: '어리석인[우스꽝스러운]'}, {a: "upstairs", b: 50.0, c: '위층으로[에], ( ↔ downstairs) 위층(의)'})
+
       function audioPlay(videoIdx) {
         $("#audioSource").attr("src", chart[videoIdx])
 				$("#audioControl").trigger("load");
@@ -524,7 +532,8 @@
     <span class="sr-only">Toggle Dropdown</span>
   </button>
   <div class="dropdown-menu">
-    
+    <a class="dropdown-item" chart="60">60d</a>
+    <div class="dropdown-divider"></div>
   </div>
 </div>
 
