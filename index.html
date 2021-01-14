@@ -330,7 +330,7 @@
         for (var i = 0; i < list.length; i++) {
           var row = list[i];
           var visible = (checked ? 'show': 'none');
-          html.push("<a b='"+ row.b +"' class=\"list-group-item list-group-item-action\"><div class=\"row\"><div class=\"col\">"+ row.a + " </div><div style='display:"+ visible + ";' class=\"col hangul\">"+ (row.c || '') + "</div></div></a>");
+          html.push("<a b='"+ row.b +"' class=\"list-group-item list-group-item-action\"><div class=\"row\"><div class=\"col\" style='flex: 0.3'>"+ row.a + " </div><div style='display:"+ visible + ";' class=\"col hangul\">"+ (row.c || '') + "</div></div></a>");
         }
         $("#divWordList").html(html.join(''));
         
